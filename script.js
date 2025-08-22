@@ -2,9 +2,11 @@
 const nav = document.querySelector('.nav');
 const toggle = document.querySelector('.nav-toggle');
 if (toggle && nav) {
+  const menu = document.getElementById('nav-menu');
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
+    if (menu) menu.setAttribute('aria-hidden', String(!open));
   });
 }
 
@@ -19,6 +21,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         nav?.classList.remove('open');
         toggle?.setAttribute('aria-expanded', 'false');
+        const menu = document.getElementById('nav-menu');
+        menu?.setAttribute('aria-hidden', 'true');
       }
     }
   });
@@ -39,4 +43,3 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Year in footer
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear().toString();
-
