@@ -4,7 +4,16 @@ const toggle = document.querySelector('.nav-toggle');
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
-    // toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close menu on Escape key for keyboard users
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
 }
 
@@ -18,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         e.preventDefault();
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         nav?.classList.remove('open');
-        // toggle?.setAttribute('aria-expanded', 'false');
+        toggle?.setAttribute('aria-expanded', 'false');
       }
     }
   });
@@ -61,4 +70,3 @@ if (authForm) {
     authForm.reset();
   });
 }
-
