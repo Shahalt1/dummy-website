@@ -120,9 +120,43 @@
         </div>
       </section>
 
-
-
-
+      <!-- User Registration/Login Form -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Join Our Community</h2>
+            <p class="muted">Stay updated with our latest insights and opportunities</p>
+          </div>
+          <div class="form-container">
+            <form class="auth-form" id="authForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="company">Company/Organization</label>
+                <input type="text" id="company" name="company" placeholder="Where do you work?" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="interest">Area of Interest</label>
+                <select id="interest" name="interest">
+                  <option value="">Select an area</option>
+                  <option value="fintech">Fintech</option>
+                  <option value="devtools">Developer Tools</option>
+                  <option value="ai">Artificial Intelligence</option>
+                  <option value="climate">Climate Tech</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-lg">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <!-- Contact / Footer CTA -->
       <section id="contact" class="section contact">
