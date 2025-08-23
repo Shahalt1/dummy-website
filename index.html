@@ -28,13 +28,13 @@
 
     <header class="site-header" id="top">
       <div class="container nav-row">
-        <a href="#top" class="logo" aria-label="Altitude Capital home">
+        <a href="#top" class="logo" ">
           <span class="logo-mark">⛰️</span>
           <span class="logo-text">Altitude Capital</span>
         </a>
 
-        <nav class="nav" aria-label="Primary">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <nav class="nav">
+          <button class="nav-toggle">
             <span class="sr-only">Toggle navigation</span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -50,8 +50,8 @@
 
     <main id="main">
       <!-- Hero -->
-      <section class="hero" aria-label="Hero">
-        <div class="hero-bg" aria-hidden="true"></div>
+      <section class="hero" >
+        <div class="hero-bg"></div>
         <div class="container hero-inner">
           <h1 class="hero-title">Backing bold founders building category‑defining companies</h1>
           <p class="hero-subtitle">We partner early and support for the long run across product, hiring, and go‑to‑market.</p>
@@ -63,12 +63,12 @@
       </section>
 
       <!-- Logos strip -->
-      <section class="logos" aria-label="Backed companies">
+      <section class="logos">
         <div class="container logos-row">
-          <div class="logo-badge" aria-label="Company One">
+          <div class="logo-badge">
             <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=80&h=80&fit=crop&crop=entropy&auto=format" alt="" width="150" height="150" style="border-radius: 6px;">
           </div>
-          <div class="logo-badge" aria-label="Company Two">
+          <div class="logo-badge">
             <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&h=80&fit=crop&crop=entropy&auto=format" alt="" width="150" height="150" style="border-radius: 6px;">
           </div>
         </div>
@@ -85,7 +85,7 @@
           </div>
           <div class="portfolio-grid">
             <article class="company reveal">
-              <div class="company-logo" aria-hidden="true">A</div>
+              <div class="company-logo">A</div>
               <div class="company-body">
                 <h3>Acme</h3>
                 <p>Developer platform simplifying event streaming at scale.</p>
@@ -120,9 +120,43 @@
         </div>
       </section>
 
-
-
-
+      <!-- User Registration/Login Form -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Join Our Community</h2>
+            <p class="muted">Stay updated with our latest insights and opportunities</p>
+          </div>
+          <div class="form-container">
+            <form class="auth-form" id="authForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="company">Company/Organization</label>
+                <input type="text" id="company" name="company" placeholder="Where do you work?" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="interest">Area of Interest</label>
+                <select id="interest" name="interest">
+                  <option value="">Select an area</option>
+                  <option value="fintech">Fintech</option>
+                  <option value="devtools">Developer Tools</option>
+                  <option value="ai">Artificial Intelligence</option>
+                  <option value="climate">Climate Tech</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-lg">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <!-- Contact / Footer CTA -->
       <section id="contact" class="section contact">
@@ -144,7 +178,7 @@
           <p class="muted">Early‑stage venture capital. Global, remote‑first.</p>
         </div>
         <div>
-          <nav aria-label="Footer">
+          <nav >
             <ul class="footer-list">
               <li><a href="#portfolio">Portfolio</a></li>
             </ul>
