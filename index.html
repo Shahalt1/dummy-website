@@ -198,6 +198,16 @@
       </div>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;">
+      <div style="background:#fff;border-radius:16px;padding:2.5rem 2rem;max-width:380px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.2);">
+        <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
+        <h2 id="modalTitle" style="margin:0 0 .5rem;font-size:1.25rem;color:#1e293b;">Success!</h2>
+        <p style="margin:0 0 1.5rem;color:#64748b;">Your form has been successfully submitted.</p>
+        <button id="closeModal" class="btn btn-lg" style="width:100%;">Close</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
   </html>

@@ -42,22 +42,26 @@ if (y) y.textContent = new Date().getFullYear().toString();
 
 // Form handling
 const authForm = document.getElementById('authForm');
+const successModal = document.getElementById('successModal');
+const closeModal = document.getElementById('closeModal');
+
 if (authForm) {
   authForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(authForm);
-    const data = Object.fromEntries(formData);
-    
-    // Show success message (in real app, this would send data to server)
-    alert('Thank you for your submission! This is a demo form.\n\nSubmitted data:\n' + 
-          'Name: ' + data.fullName + '\n' +
-          'Email: ' + data.email + '\n' +
-          'Company: ' + data.company + '\n' +
-          'Interest: ' + data.interest);
-    
-    // Reset form
     authForm.reset();
+    successModal.style.display = 'flex';
+    closeModal.focus();
+  });
+}
+
+if (closeModal) {
+  closeModal.addEventListener('click', () => {
+    successModal.style.display = 'none';
+  });
+}
+
+if (successModal) {
+  successModal.addEventListener('click', (e) => {
+    if (e.target === successModal) successModal.style.display = 'none';
   });
 }
