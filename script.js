@@ -42,26 +42,12 @@ if (y) y.textContent = new Date().getFullYear().toString();
 
 // Form handling
 const authForm = document.getElementById('authForm');
-const successModal = document.getElementById('successModal');
-const closeModal = document.getElementById('closeModal');
+const successMessage = document.getElementById('successMessage');
 
 if (authForm) {
   authForm.addEventListener('submit', function(e) {
     e.preventDefault();
     authForm.reset();
-    successModal.style.display = 'flex';
-    closeModal.focus();
-  });
-}
-
-if (closeModal) {
-  closeModal.addEventListener('click', () => {
-    successModal.style.display = 'none';
-  });
-}
-
-if (successModal) {
-  successModal.addEventListener('click', (e) => {
-    if (e.target === successModal) successModal.style.display = 'none';
+    successMessage.style.display = 'block';
   });
 }
