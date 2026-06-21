@@ -44,10 +44,26 @@ if (y) y.textContent = new Date().getFullYear().toString();
 const authForm = document.getElementById('authForm');
 const successMessage = document.getElementById('successMessage');
 
-if (authForm) {
+if (authForm && successMessage) {
+  let successHideTimer = null;
+
+  const hideSuccess = () => {
+    successMessage.style.display = 'none';
+    if (successHideTimer) {
+      clearTimeout(successHideTimer);
+      successHideTimer = null;
+    }
+  };
+
   authForm.addEventListener('submit', function(e) {
     e.preventDefault();
     authForm.reset();
     successMessage.style.display = 'block';
+    if (successHideTimer) clearTimeout(successHideTimer);
+    successHideTimer = setTimeout(hideSuccess, 5000);
+  });
+
+  authForm.addEventListener('input', () => {
+    if (successMessage.style.display === 'block') hideSuccess();
   });
 }
